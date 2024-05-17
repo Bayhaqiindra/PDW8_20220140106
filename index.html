@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+  
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+  <title>Saga Burger</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <section id="overlay">
+  <div id="header">
+    <img src="./source/logo.svg" alt="Logo Saga Burger" id="logo">
+    <div id="divider"></div>
+  </div>
+  <video autoplay loop muted id="bgVideo">
+    <source src="./source/bg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>  
+    <form id="burgerForm">
+      <h1>Form Order</h1>
+      <section class="protein">
+        <label for="patty">Jenis protein apa yang Anda inginkan?</label>
+        <input type="text" name="patty" id="patty">
+      </section>
+      <hr>
+      <section class="patties">
+        <label for="amount">Berapa banyak burger yang Anda inginkan?</label>
+        <input type="number" name="amount" id="amount">
+      </section>
+      <hr>
+      <section class="cooked">
+        <label for="kematangan">Bagaimana Anda ingin burger Anda dimasak</label>
+        <br>
+        <span>Matang</span>
+        <input type="range" name="doneness" id="doneness" value="3" min="1" max="5">
+        <span>Tidak Matang</span>
+      </section>
+      <hr>
+      <section class="toppings">
+        <span>Anda ingin topping apa?</span>
+        <br>
+        <input type="checkbox" name="topping" id="lettuce" value="lettuce">
+        <label for="lettuce">Selada</label>
+        <input type="checkbox" name="topping" id="tomat" value="tomat">
+        <label for="tomat">Tomat</label>
+        <input type="checkbox" name="topping" id="onion" value="onion">
+        <label for="onion">Bawang Bombai</label>
+        <input type="checkbox" name="topping" id="cheese" value="cheese">
+        <label for="cheese">Keju</label>
+        <input type="checkbox" name="topping" id="cucumber" value="cucumber">
+        <label for="cucumber">Timun</label>
+      </section>
+      <hr>
+      <section class="beef">
+        <span>Apakah Anda ingin menambahkan Extra Daging</span>
+        <br>
+        <input type="radio" name="cheese" id="yes" value="yes">
+        <label for="yes">Ya</label>
+        <input type="radio" name="cheese" id="no" value="no">
+        <label for="no">Tidak</label>
+      </section>
+      <hr>
+      <section class="bun-type">
+        <label for="bun">Roti jenis apa yang kamu inginkan?</label>
+        <select name="bun" id="bun">
+          <option value="sesame">Wijen</option>
+          <option value="potato">Kentang</option>
+        </select>
+      </section>
+      <hr>
+      <section class="sauce-selection">
+        <label for="sauce">Saus jenis apa yang kamu inginkan?</label>
+        <input list="sauces" id="sauce" name="sauce">
+        <datalist id="sauces">
+          <option value="Paket A">Sauce Sambal - Tomat</option>
+          <option value="Paket B">Sauce Sambal - Tomat = Mayones</option>
+        </datalist>
+      </section>
+      <hr>
+      <section class="extra-info">
+        <label for="extra">Apakah ada hal lain yang ingin Anda tambahkan?</label>
+        <br>
+        <textarea id="extra" name="extra" rows="3" cols="40"></textarea>
+      </section>
+      <hr>
+      <section class="submission">
+        <input type="submit" value="Submit">
+      </section>
+    </form>
+  </section>
+
+  <section id="outputSection" style="display:none;">
+    <div id="outputContent">
+      <div id="outputHeader">
+        <img src="./source/logo.svg" alt="Logo do Davie's Burgers" id="outputLogo">
+      </div>
+      <hr>
+      <div id="orderOutput">
+      </div>
+      <h1>Terima Kasih!</h1>
+    </div>
+  </section>
+  
+
+  <script src="test/test.js"></script>
+</body>
+</html>
